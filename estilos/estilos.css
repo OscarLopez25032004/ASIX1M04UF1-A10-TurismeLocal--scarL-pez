@@ -3,10 +3,8 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 .encabezado {
-    text-align: center;
     color: #fff;
 }
-
 .fondo {
     background-size: cover;
     background-position: center;
@@ -14,8 +12,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
-
 .fondo h1 {
     margin: 0;
     font-size: 3em;
@@ -30,65 +29,79 @@ body {
     padding: 20px;
     box-sizing: border-box;
     border: 1px solid #ccc;
+    text-align: center;
 }
 .menu {
     background-color: #f0f0f0;
 }
-
 .menu ul {
     list-style: none;
     padding: 0;
 }
-
 .menu li {
     margin-bottom: 10px;
 }
-
 .menu a {
     text-decoration: none;
     color: #333;
 }
-
 .contenido {
     background-color: #fff;
 }
-
 .ficha {
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 20px;
+    border-radius: 4px;
 }
-
 .noticias {
     background-color: #f0f0f0;
 }
-
 .noticias article {
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 20px;
+    border-radius: 4px;
 }
 .imgs {
     width: 75%;
 }
-h2 {
-    text-align: center;
+#lugares {
+    margin-top: 3%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* MEDIA QUERIES 700px */
+.section1{
+    display: flex;
+    width: 100%;
+}
+/* indica el estilo de las imagenes del section1 */
+.section1 img{
+    width: 20%;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+    border-radius: 7px;
+}
+/* indica la animacion que hacen las img de la seccion del carousel al pasar el raton por encima */
+.section1 img:hover{
+    cursor: crosshair;
+    width: 40%;
+    opacity: 1;
+    filter: contrast(120%);
+}
+.imglugaresdeint {
+    width: 75%;
+    border-radius: 4px;
+}
+/* indican las media queries */
+@media screen and (max-width: 768px) {
+    .contenedor {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* indica la media query de las filas 2, 3 y 4 (para que pasen a media 100% y no el 50%) */
+    .column-3 {
+        width: 100%;
+    }
+}
